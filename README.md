@@ -1,7 +1,7 @@
 ## This is NewYork Times Article App:
 
 # Technologies and pattern:
-1- Applying Clean architecture-> Dividing code to (data layer, domain layer(UseCases) and presentation layer).
+1-Applying Clean architecture-> Dividing code to (data layer, domain layer(UseCases) and presentation layer).
 2- MVP: Model-View-Presenter-> For dealing with data layer and presentation layer.
 3- RxJava & RxAndroid-> For asynchronous operations 
 4- Retrofit-> For dealing with webServices and OkHTTP requests.
