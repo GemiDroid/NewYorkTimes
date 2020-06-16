@@ -14,11 +14,11 @@ This is NewYork Times Article App:
 2- Navigate to java, then open com.example.newyorktimearticles.presentation.ui.
 3- Run 2 UI tests.
 
-#How to test unit test:
+# How to test unit test:
 1- Navigate to src/androidTest.
 2- Navigate to java, then open com.example.newyorktimearticles.presentation.presenter.
 3- Run 1 Unit test.
 
-#According to coroutines:
+# According to coroutines:
 1-It's used by Kotlin not Java.
 2-Resource: https://play.kotlinlang.org/.
