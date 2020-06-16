@@ -1,0 +1,32 @@
+// Top-level build file where you can add configuration options common to all sub-projects/modules.
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath "com.android.tools.build:gradle:4.0.0"
+    }
+}
+
+allprojects {
+    repositories {
+        maven { url "https://oss.jfrog.org/libs-snapshot" }
+        google()
+        jcenter()
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
+
+ext {
+    constraint_version = '2.0.0-beta7'
+    rxJava_version = '2.2.10'
+    rxAndroid_version = '2.1.1'
+    retrofit_version = '2.9.0'
+    okhttp3_version = '3.11.0'
+    glide_version = '4.11.0'
+    circular_image_version = '3.1.0'
+}
