@@ -43,6 +43,8 @@ public class ArticlePresenter implements IArticlePresenter {
 
     @Override
     public void onDestroy() {
+        if (!compositeDisposable.isDisposed())
+            compositeDisposable.dispose();
         if (view != null)
             view = null;
     }
