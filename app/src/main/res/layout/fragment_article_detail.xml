@@ -30,7 +30,7 @@
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
 
             <ImageView
-                android:id="@+id/ivArticleDetails"
+                android:id="@+id/iv_article_details"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:scaleType="fitCenter"

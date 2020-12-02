@@ -1,17 +1,19 @@
-// Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
+    ext.kotlin_version = "1.4.20"
     repositories {
         google()
         jcenter()
     }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.0.0"
+        classpath "com.android.tools.build:gradle:4.1.1"
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
 
 allprojects {
     repositories {
         maven { url "https://oss.jfrog.org/libs-snapshot" }
+        maven { url 'https://jitpack.io' }
         google()
         jcenter()
     }
@@ -22,11 +24,12 @@ task clean(type: Delete) {
 }
 
 ext {
-    constraint_version = '2.0.0-beta7'
+    koin_version = '2.1.6'
+    constraint_version = '2.1.0-alpha1'
     rxJava_version = '2.2.10'
     rxAndroid_version = '2.1.1'
     retrofit_version = '2.9.0'
-    okhttp3_version = '3.11.0'
+    okhttp3_version = '4.8.0'
     glide_version = '4.11.0'
     circular_image_version = '3.1.0'
 }

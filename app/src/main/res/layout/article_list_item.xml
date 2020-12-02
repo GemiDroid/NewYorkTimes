@@ -7,32 +7,32 @@
     android:layout_margin="@dimen/margin_10">
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/ivArticle"
+        android:id="@+id/iv_article"
         android:layout_width="@dimen/img_width"
         android:layout_height="@dimen/img_height"
         android:layout_marginEnd="@dimen/margin_5"
         android:src="@drawable/ic_launcher_background"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/barrierContent"
+        app:layout_constraintEnd_toStartOf="@id/barrier_content"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/tvArticleTitle"
+        android:id="@+id/tv_article_title"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:ellipsize="end"
-        android:lines="2"
+        android:maxLines="2"
         android:textColor="@color/dark_grey"
         android:textSize="@dimen/font_17"
         android:textStyle="bold"
-        app:layout_constraintEnd_toStartOf="@id/barrierNavigate"
-        app:layout_constraintStart_toEndOf="@id/barrierContent"
+        app:layout_constraintEnd_toStartOf="@id/barrier_navigate"
+        app:layout_constraintStart_toEndOf="@id/barrier_content"
         app:layout_constraintTop_toTopOf="parent"
         tool:text="@string/appbar_scrolling_view_behavior" />
 
     <TextView
-        android:id="@+id/tvArticleDescription"
+        android:id="@+id/tv_article_description"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/margin_10"
@@ -41,13 +41,13 @@
         android:textColor="@color/white_grey"
         android:textSize="@dimen/font_17"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@id/ivDate"
-        app:layout_constraintStart_toEndOf="@id/barrierContent"
-        app:layout_constraintTop_toBottomOf="@id/tvArticleTitle"
+        app:layout_constraintEnd_toStartOf="@id/iv_date"
+        app:layout_constraintStart_toEndOf="@id/barrier_content"
+        app:layout_constraintTop_toBottomOf="@id/tv_article_title"
         tool:text="@string/appbar_scrolling_view_behavior" />
 
     <ImageView
-        android:id="@+id/ivArticleNavigate"
+        android:id="@+id/iv_article_navigate"
         android:layout_width="wrap_content"
         android:layout_height="0dp"
         android:src="@drawable/ic_navigate"
@@ -58,37 +58,38 @@
 
 
     <ImageView
-        android:id="@+id/ivDate"
+        android:id="@+id/iv_date"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/ic_calendar"
-        app:layout_constraintBottom_toBottomOf="@id/tvDate"
-        app:layout_constraintEnd_toStartOf="@id/tvDate"
-        app:layout_constraintStart_toEndOf="@id/tvArticleDescription" />
+        app:layout_constraintBottom_toBottomOf="@id/tv_date"
+        app:layout_constraintEnd_toStartOf="@id/tv_date"
+        app:layout_constraintStart_toEndOf="@id/tv_article_description"
+        tool:ignore="ContentDescription" />
 
     <TextView
-        android:id="@+id/tvDate"
+        android:id="@+id/tv_date"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/margin_5"
         android:textColor="@color/white_grey"
-        app:layout_constraintBottom_toBottomOf="@id/tvArticleDescription"
-        app:layout_constraintEnd_toStartOf="@id/barrierNavigate"
+        app:layout_constraintBottom_toBottomOf="@id/tv_article_description"
+        app:layout_constraintEnd_toStartOf="@id/barrier_navigate"
         tool:text="2020-15-06" />
 
     <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrierContent"
+        android:id="@+id/barrier_content"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:barrierDirection="start"
-        app:constraint_referenced_ids="tvArticleTitle,tvArticleDescription"
-        app:layout_constraintEnd_toStartOf="@id/ivArticle" />
+        app:constraint_referenced_ids="tv_article_title,tv_article_description"
+        app:layout_constraintEnd_toStartOf="@id/iv_article" />
 
     <androidx.constraintlayout.widget.Barrier
-        android:id="@+id/barrierNavigate"
+        android:id="@+id/barrier_navigate"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:barrierDirection="start"
-        app:constraint_referenced_ids="ivArticleNavigate" />
+        app:constraint_referenced_ids="iv_article_navigate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
