@@ -1,4 +1,4 @@
-## This is NewYork Times Article App:
+# This is NewYork Times Article App:
 
 # Technologies and pattern:
 1- Applying Clean architecture-> Dividing code to (data layer, domain layer(UseCases) and presentation layer).

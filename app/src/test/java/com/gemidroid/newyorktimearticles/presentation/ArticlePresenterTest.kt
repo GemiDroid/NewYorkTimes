@@ -1,34 +1,27 @@
-package com.gemidroid.newyorktimearticles.presentation.presenter;
+package com.gemidroid.newyorktimearticles.presentation
 
-import com.gemidroid.newyorktimearticles.data.model.Articles;
+import com.gemidroid.newyorktimearticles.data.model.Articles
+import org.junit.Assert
+import org.junit.Test
+import java.util.*
 
-import org.junit.Test;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
-
-public class ArticlePresenterTest {
-
+class ArticlePresenterTest {
+    // Assume that we have faked list of articles...
     @Test
-    public void getArticlesList_then_check_if_not_null() {
-
+    fun articlesList_then_check_if_not_null() {
         // Assume that we have faked list of articles...
-        List<Articles> fakedArticleList = new ArrayList<>();
-        fakedArticleList.add(new Articles("Title1", "Description1", "2020-06-12"));
-        fakedArticleList.add(new Articles("Title2", "Description2", "2020-05-13"));
-        fakedArticleList.add(new Articles("Title3", "Description3", "2019-04-10"));
-
-        assertNotNull(fakedArticleList);
+        val fakedArticleList: MutableList<Articles> = ArrayList()
+        fakedArticleList.add(Articles("Title1", "Description1", "2020-06-12"))
+        fakedArticleList.add(Articles("Title2", "Description2", "2020-05-13"))
+        fakedArticleList.add(Articles("Title3", "Description3", "2019-04-10"))
+        Assert.assertNotNull(fakedArticleList)
     }
 
+    // Assume that we have faked null list of articles...
     @Test
-    public void getArticlesList_then_check_if_null() {
+    fun articlesList_then_check_if_null() {
         // Assume that we have faked null list of articles...
-        List<Articles> fakedArticleList = null;
-
-        assertNull(fakedArticleList);
+        val fakedArticleList: List<Articles>? = null
+        Assert.assertNull(fakedArticleList)
     }
 }
